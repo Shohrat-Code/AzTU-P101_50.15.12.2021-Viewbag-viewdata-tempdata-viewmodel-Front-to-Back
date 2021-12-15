@@ -1,0 +1,29 @@
+﻿@model VmStuGroup
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-group">
+                    @foreach (var item in Model.Students)
+                    {
+                        <li class="list-group-item text-left">@item.Id-@item.Name @item.Surname</li>
+                    }
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class="list-group">
+                    @foreach (var item in Model.Groups)
+                    {
+                        <li class="list-group-item text-left">@item.Id-@item.Name</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
